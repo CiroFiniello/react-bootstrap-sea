@@ -1,0 +1,37 @@
+@import "../../../styles/variables.scss";
+nav {
+  background-color: $primary_color;
+  height: 100px;
+  .container-left {
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .container-center {
+    .nav-item {
+      .nav-link {
+        padding: 0;
+        margin-right: 1rem;
+      }
+      &.active {
+        .nav-link {
+          border-bottom: 3px solid $active_link;
+        }
+      }
+    }
+  }
+  .container-right {
+    button {
+      background-color: $button_bg;
+      border: transparent;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .avatar {
+      width: 80px;
+    }
+  }
+}
