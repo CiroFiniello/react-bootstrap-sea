@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+div.title {
+  background-color: black;
+}
+img.games {
+  // height: 130px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.barra {
+  background-color: $bg_barre;
+  border: 2px solid black;
+  height: 10px;
+}
+.game {
+  border: 5px solid black;
+}
+img.games:hover {
+  transform: scale(1.1);
+}
+figure {
+  height: 30%;
+  width: 30%;
+}

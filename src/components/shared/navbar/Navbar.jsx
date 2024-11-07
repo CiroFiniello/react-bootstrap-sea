@@ -43,7 +43,7 @@ const Navbar = ({ avatar }) => {
         <button>installa sea</button>
         <button>🔔</button>
         <a href="#">USER</a>
-        <figure className="mb-0">
+        <figure className="m-0">
           <img src={avatar} alt="logo" className="avatar" />
         </figure>
       </div>

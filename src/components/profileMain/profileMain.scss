@@ -1,1 +1,10 @@
 @import "../../styles/variables.scss";
+
+div.box {
+  figure {
+    max-width: 300px;
+  }
+}
+div.box-right {
+  background-color: $bg_secondary;
+}

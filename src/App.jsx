@@ -4,6 +4,7 @@ import Navbar from "./components/shared/navbar/Navbar";
 import ProfileMain from "./components/profileMain/ProfileMain";
 import Aside from "./components/aside/Aside";
 import Comments from "./components/comments/comments";
+import Attivita from "./components/attivita/attivita";
 
 import "./App.scss";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,7 +14,7 @@ function App() {
 
   useEffect(() => {
     // URL diretto dell'immagine
-    const imageUrl = "https://api.multiavatar.com/Binx Bond.svg";
+    const imageUrl = "https://xsgames.co/randomusers/avatar.php?g=male ";
     setAvatarUrl(imageUrl); // Impostiamo direttamente l'URL
   }, []);
   return (
@@ -22,11 +23,11 @@ function App() {
         <Navbar avatar={avatarUrl} />
       </>
       <main className="container">
-        <ProfileMain />
+        <ProfileMain avatar={avatarUrl} />
         <div className="row">
           <div className="col-md-9">
             <div>
-              <p>attività</p>
+              <Attivita />
             </div>
             <div>
               <Comments />
