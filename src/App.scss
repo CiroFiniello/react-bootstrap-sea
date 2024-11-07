@@ -20,3 +20,8 @@ body {
   color: white;
   border: transparent;
 }
+
+button:hover {
+  box-shadow: 0 4px 8px $active_link;
+  background-color: $button_bg;
+}
