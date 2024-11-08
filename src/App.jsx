@@ -12,6 +12,10 @@ import "./App.scss";
 
 function App() {
   const [avatarUrl, setAvatarUrl] = useState(null);
+  const [nickname, setNickname] = useState("");
+  const [visitatore, setVisitatore] = useState(null);
+  const [visitatorename, setVisitatoreName] = useState("");
+
   const Amici = [
     {
       id: 0,
@@ -108,24 +112,62 @@ function App() {
 
   useEffect(() => {
     // URL diretto dell'immagine
-    const imageUrl = "https://xsgames.co/randomusers/avatar.php?g=male ";
+    const imageUrl = "https://xsgames.co/randomusers/avatar.php?g=male";
     setAvatarUrl(imageUrl); // Impostiamo direttamente l'URL
   }, []);
+
+  useEffect(() => {
+    // URL diretto dell'immagine
+    const visitatoreUrl = `https://xsgames.co/randomusers/avatar.php?g=male&random=${Math.random()}`;
+    setVisitatore(visitatoreUrl); // Impostiamo direttamente l'URL
+  }, []);
+
+  useEffect(() => {
+    const fetchNickname = async () => {
+      try {
+        const response = await fetch("https://randomuser.me/api/");
+        const data = await response.json();
+        const nickname = data.results[0].login.username;
+        setNickname(nickname);
+      } catch (error) {
+        console.error("Errore nel fetch del nickname:", error);
+      }
+    };
+
+    const fetchVisitatoreName = async () => {
+      try {
+        const response = await fetch("https://randomuser.me/api/");
+        const data = await response.json();
+        const visitatorename = data.results[0].login.username;
+        setVisitatoreName(visitatorename);
+      } catch (error) {
+        console.error("Errore nel fetch del visitatorename:", error);
+      }
+    };
+
+    fetchNickname();
+    fetchVisitatoreName();
+  }, []);
+
   return (
     <>
-      <>
-        <Navbar avatar={avatarUrl} />
-      </>
+      <Navbar
+        avatar={avatarUrl}
+        nickname={nickname}
+        visitatore={visitatore}
+        visitatorename={visitatorename}
+      />
       <main className="container">
-        <ProfileMain avatar={avatarUrl} />
+        <ProfileMain avatar={avatarUrl} nickname={nickname} />
         <div className="row">
           <div className="col-md-9">
-            <div>
-              <Attivita />
-            </div>
-            <div>
-              <Comments Amici={Amici} Avatar={avatarUrl} />
-            </div>
+            <Attivita />
+            <Comments
+              Amici={Amici}
+              Avatar={avatarUrl}
+              visitatorename={visitatorename}
+              visitatore={visitatore}
+            />
           </div>
           <section className="col-md-3">
             <Aside />

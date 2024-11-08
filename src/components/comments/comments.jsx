@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./comments.scss";
 import PropTypes from "prop-types";
 
-const Comments = ({ Amici, Avatar }) => {
+const Comments = ({ Amici, Avatar, visitatore, visitatorename }) => {
   const [newcommento, setNewCommento] = useState("");
   const [friends, setNewFriends] = useState(Amici);
   const [currentPage, setCurrentPage] = useState(1);
@@ -12,9 +12,9 @@ const Comments = ({ Amici, Avatar }) => {
     if (!newcommento) return;
     const newAmiciObj = {
       id: friends.length + 1,
-      name: "User",
+      name: visitatorename,
       commento: newcommento,
-      profilepic: Avatar,
+      profilepic: visitatore,
     };
     setNewFriends([...friends, newAmiciObj]);
     setNewCommento("");

@@ -2,18 +2,18 @@ import React from "react";
 import "./ProfileMain.scss";
 import "../../App.scss";
 
-const ProfileMain = ({ avatar }) => {
+const ProfileMain = ({ avatar, nickname }) => {
   return (
     <div className="">
       <div className="row mx-2">
         <section className="col-md-9 mt-3">
           <div className="box d-flex">
             <figure>
-              <img src={avatar} alt="" />
+              <img src={avatar} alt="avatar" />
             </figure>
             <div className="userdata ms-4 d-flex justify-content-evenly flex-column">
               <section className="data">
-                <h3>User</h3>
+                <h3>{nickname}</h3>
                 <p>Nickname</p>
               </section>
               <section className="description">

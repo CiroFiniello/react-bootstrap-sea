@@ -1,7 +1,7 @@
 import React from "react";
 import sea from "../../../assets/sea.png";
 import "./navbar.scss";
-const Navbar = ({ avatar }) => {
+const Navbar = ({ avatar, nickname, visitatore, visitatorename }) => {
   return (
     <nav className="navbar navbar-expand-lg d-flex justify-content-evenly w-100 align-items-center">
       <div className="container-left ">
@@ -24,7 +24,7 @@ const Navbar = ({ avatar }) => {
           </li>
           <li className="nav-item active">
             <a href="#" className="nav-link text-white">
-              USER
+              {visitatorename.toUpperCase()}
             </a>
           </li>
           <li className="nav-item">
@@ -42,9 +42,9 @@ const Navbar = ({ avatar }) => {
       <div className="container-right d-flex gap-1 align-items-start">
         <button>installa sea</button>
         <button>🔔</button>
-        <a href="#">USER</a>
+        <a href="#">{visitatorename}</a>
         <figure className="m-0">
-          <img src={avatar} alt="logo" className="avatar" />
+          <img src={visitatore} alt="logo" className="avatar" />
         </figure>
       </div>
     </nav>
