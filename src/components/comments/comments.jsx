@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 const Comments = ({ Amici, Avatar }) => {
   const [newcommento, setNewCommento] = useState("");
   const [friends, setNewFriends] = useState(Amici);
+  const [currentPage, setCurrentPage] = useState(1);
+  const commentsPerPage = 5;
 
   const onAddComment = () => {
     if (!newcommento) return;
@@ -16,6 +18,27 @@ const Comments = ({ Amici, Avatar }) => {
     };
     setNewFriends([...friends, newAmiciObj]);
     setNewCommento("");
+  };
+
+  // Calcola l'indice dei commenti da mostrare sulla pagina corrente
+  const indexOfLastComment = currentPage * commentsPerPage;
+  const indexOfFirstComment = indexOfLastComment - commentsPerPage;
+  const currentComments = friends.slice(
+    indexOfFirstComment,
+    indexOfLastComment
+  );
+
+  // Funzioni di cambio pagina
+  const nextPage = () => {
+    if (currentPage < Math.ceil(friends.length / commentsPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
   };
 
   return (
@@ -41,31 +64,36 @@ const Comments = ({ Amici, Avatar }) => {
         <button className="btn-main col-md-2" onClick={onAddComment}>
           Pubblica
         </button>
+      </section>
 
-        <section className="data">
-          {friends.map((amico) => (
-            <div key={amico.id} className="comment row pt-3">
-              <figure className="col-md-2 immagine">
-                <img
-                  src={amico.profilepic}
-                  alt={amico.name}
-                  className="avatar"
-                />
-              </figure>
-              <article className="col-md-9">
-                <h6>{amico.name}</h6>
-                <div className="commento">
-                  <p>{amico.commento}</p>
-                </div>
-              </article>
-            </div>
-          ))}
-          <div className="pagination align-items-center d-flex">
-            <button>👈</button>
-            <p className="mb-0">page</p>
-            <button>👉</button>
+      <section className="data mx-1 px-3">
+        {currentComments.map((amico) => (
+          <div key={amico.id} className="comment row pt-3">
+            <figure className="col-md-2 immagine">
+              <img src={amico.profilepic} alt={amico.name} className="avatar" />
+            </figure>
+            <article className="col-md-9">
+              <h6>{amico.name}</h6>
+              <div className="commento">
+                <p>{amico.commento}</p>
+              </div>
+            </article>
           </div>
-        </section>
+        ))}
+        <div className="pagination align-items-center d-flex">
+          <button onClick={prevPage} disabled={currentPage === 1}>
+            👈
+          </button>
+          <p className="mb-0">Page {currentPage}</p>
+          <button
+            onClick={nextPage}
+            disabled={
+              currentPage === Math.ceil(friends.length / commentsPerPage)
+            }
+          >
+            👉
+          </button>
+        </div>
       </section>
     </div>
   );
@@ -79,6 +107,7 @@ Comments.propTypes = {
       commento: PropTypes.string.isRequired,
     })
   ).isRequired,
+  Avatar: PropTypes.string.isRequired,
 };
 
 export default Comments;
