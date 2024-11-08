@@ -170,7 +170,7 @@ function App() {
             />
           </div>
           <section className="col-md-3">
-            <Aside />
+            <Aside Amici={Amici} />
           </section>
         </div>
       </main>
