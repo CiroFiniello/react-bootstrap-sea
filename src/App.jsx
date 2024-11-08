@@ -7,10 +7,104 @@ import Comments from "./components/comments/comments";
 import Attivita from "./components/attivita/attivita";
 
 import "./App.scss";
-// import "bootstrap/dist/css/bootstrap.min.css";
+
+//dati dei commenti
 
 function App() {
   const [avatarUrl, setAvatarUrl] = useState(null);
+  const Amici = [
+    {
+      id: 0,
+      name: "Sarah",
+      status: "online",
+      game: "Rust",
+      commento:
+        "Che bel profilo hai creato, sono contento di vederti su Sea, ti andrebbe di giocare con me a Rust?",
+      profilepic:
+        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    },
+    {
+      id: 1,
+      name: "John",
+      status: "offline",
+      game: "League of Legends",
+      commento: "Ehi, voglio sfidarti in una partita a League of Legends!",
+      profilepic:
+        "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg",
+    },
+    {
+      id: 2,
+      name: "Emma",
+      status: "online",
+      game: "Minecraft",
+      commento: "Stiamo costruendo un castello su Minecraft, unisciti a noi!",
+      profilepic:
+        "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg",
+    },
+    {
+      id: 3,
+      name: "Mike",
+      status: "offline",
+      game: "Fortnite",
+      commento: "Dovremmo fare una squadra su Fortnite questo weekend!",
+      profilepic:
+        "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+    },
+    {
+      id: 4,
+      name: "Anna",
+      status: "online",
+      game: "Apex Legends",
+      commento: "Sono pronta per una partita a Apex Legends, ci sei?",
+      profilepic:
+        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    },
+    {
+      id: 5,
+      name: "James",
+      status: "offline",
+      game: "Call of Duty",
+      commento: "Devo migliorare le mie abilità su Call of Duty, mi aiuti?",
+      profilepic:
+        "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg",
+    },
+    {
+      id: 6,
+      name: "Sophia",
+      status: "online",
+      game: "Overwatch",
+      commento: "Sono entrata nella tua squadra su Overwatch!",
+      profilepic:
+        "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg",
+    },
+    {
+      id: 7,
+      name: "Chris",
+      status: "offline",
+      game: "Valorant",
+      commento: "Dovremmo fare una partita a Valorant domani!",
+      profilepic:
+        "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+    },
+    {
+      id: 8,
+      name: "Olivia",
+      status: "online",
+      game: "PUBG",
+      commento: "Sto cercando un partner per PUBG, ti unisci a me?",
+      profilepic:
+        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    },
+    {
+      id: 9,
+      name: "David",
+      status: "offline",
+      game: "Dota 2",
+      commento: "Hai tempo per una partita a Dota 2 questo fine settimana?",
+      profilepic:
+        "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg",
+    },
+  ];
 
   useEffect(() => {
     // URL diretto dell'immagine
@@ -30,7 +124,7 @@ function App() {
               <Attivita />
             </div>
             <div>
-              <Comments />
+              <Comments Amici={Amici} Avatar={avatarUrl} />
             </div>
           </div>
           <section className="col-md-3">
