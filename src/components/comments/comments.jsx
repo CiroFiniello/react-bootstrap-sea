@@ -66,7 +66,7 @@ const Comments = ({ Amici, Avatar }) => {
         </button>
       </section>
 
-      <section className="data mx-1 px-3">
+      <section className="dati mx-1 px-3">
         {currentComments.map((amico) => (
           <div key={amico.id} className="comment row pt-3">
             <figure className="col-md-2 immagine">
