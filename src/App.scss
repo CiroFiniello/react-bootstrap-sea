@@ -1,15 +1,13 @@
 @import "bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,600;1,600&display=swap");
-@import "./styles/variables.scss";
+@import "./styles/theme.scss";
 
 * {
   color: white;
 }
+a {
+  text-decoration: none;
+}
 body {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   background-color: #006581;
 }
 .container {
@@ -20,8 +18,10 @@ body {
   color: white;
   border: transparent;
 }
-
-button:hover {
-  box-shadow: 0 4px 8px $active_link;
-  background-color: $button_bg;
+button {
+  font-family: $head_font;
+  &:hover {
+    box-shadow: 0 4px 8px $active_link;
+    background-color: $button_bg;
+  }
 }

@@ -43,12 +43,12 @@ const Comments = ({ Amici, Avatar, visitatore, visitatorename }) => {
 
   return (
     <div className="comments pt-2">
-      <section className="title row mt-3">
-        <div className="box col-md-6 mt-3">
+      <section className="title mt-3">
+        <div className="box  mt-3">
           <h6>Commenti</h6>
           <p>Mostra tutti i commenti</p>
         </div>
-        <div className="box col-md-6 align-content-center gap-1">
+        <div className="box align-content-center gap-1">
           <input type="checkbox" />
           <span className="ms-2">segui discussione</span>
         </div>
@@ -69,10 +69,10 @@ const Comments = ({ Amici, Avatar, visitatore, visitatorename }) => {
       <section className="dati mx-1 px-3">
         {currentComments.map((amico) => (
           <div key={amico.id} className="comment row pt-3">
-            <figure className="col-md-2 immagine">
+            <figure className=" immagine">
               <img src={amico.profilepic} alt={amico.name} className="avatar" />
             </figure>
-            <article className="col-md-9">
+            <article className="">
               <h6>{amico.name}</h6>
               <div className="commento">
                 <p>{amico.commento}</p>

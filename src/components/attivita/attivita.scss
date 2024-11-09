@@ -1,24 +1,50 @@
 @import "../../styles/variables.scss";
-div.title {
-  background-color: black;
+.activites {
+  background-color: rgba($color: $bg_secondary, $alpha: 0.4);
 }
-img.games {
-  // height: 130px;
-  width: 100%;
+.game,
+.title {
+  background-color: $variamo;
+}
+.bg-image {
+  height: 80px;
+  width: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: transform 0.3s ease;
+  &.csgo {
+    background-image: url("../../assets/csgo.webp");
+  }
+  &.rust {
+    background-image: url("../../assets/rust.webp");
+  }
+  &.payday {
+    background-image: url("../../assets/payday.webp");
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
 }
-.barra {
-  background-color: $bg_barre;
-  border: 2px solid black;
-  height: 10px;
-}
-.game {
-  border: 5px solid black;
-}
-img.games:hover {
-  transform: scale(1.1);
-}
-figure {
-  height: 30%;
-  width: 30%;
+.under-game {
+  background-color: rgba($color: $active_link, $alpha: 0.2);
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  a {
+    color: white;
+    &:hover {
+      color: $active_link;
+    }
+    span {
+      color: white;
+    }
+  }
+  .barra {
+    background: $bg_barre;
+    border: 2px solid black;
+    height: 10px;
+    width: 150px;
+    border-radius: 20px;
+  }
 }

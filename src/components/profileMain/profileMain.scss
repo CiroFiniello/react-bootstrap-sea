@@ -1,10 +1,33 @@
 @import "../../styles/variables.scss";
 
-div.box {
+div.container-userdata {
   figure {
     max-width: 300px;
+    :hover {
+      transform: scale(1.5);
+    }
+  }
+}
+.container-level {
+  .level-number {
+    margin-left: 8px;
+    padding-top: 8px;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    font-size: smaller;
+    border: 3px solid $active_link;
+    border-radius: 50%;
   }
 }
 div.box-right {
   background-color: $bg_secondary;
+  span {
+    display: block;
+    height: 80px;
+    width: 80px;
+    background-image: url("../../assets/gatto.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }

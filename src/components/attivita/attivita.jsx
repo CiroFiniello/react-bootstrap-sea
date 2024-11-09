@@ -6,73 +6,78 @@ import "./attivita.scss";
 
 const Attivita = () => {
   return (
-    <div className="row">
-      <div className="attivita ms-3">
-        <section className="">
-          <div className="row title mb-3 pt-2 ">
-            <h4 className="col-9">Attività recente</h4>
-            <p className="col-3"> 0.7 ore nelle ultime 2 settimane</p>
-          </div>
-          <section className="row game">
-            <div className="bg-black col-md-9 d-flex align-items-start pt-2">
-              <figure>
-                <img src={csgo} alt="csgo" className="games" />
-              </figure>
+    <div className="activites">
+      <div className="  d-flex justify-content-between title mb-3 p-3 align-items-center ">
+        <h4 className="m-0">Attività recente</h4>
+        <p className="m-0"> 0.7 ore nelle ultime 2 settimane</p>
+      </div>
+      <div className="p-3">
+        <section className="game  p-3">
+          <div className="d-flex justify-content-between align-items-end">
+            <div className="d-flex align-items-start pt-2">
+              <div className="bg-image csgo"></div>
               <h6 className="m-3">Counter-Strike 2</h6>
             </div>
-            <div className="bg-black box col-md-3 pt-2">
-              <p> 150 ore in totale</p>
-              <p> Ultimo avvio: 25 ott</p>
+            <div className="pt-2">
+              <p className="m-0 text-end"> 150 ore in totale</p>
+              <p className="m-0 text-end"> Ultimo avvio: 25 ott</p>
             </div>
-            <div className="row under-game mt-2 ">
-              <h6 className="col-md-1 me-4 ">Achivment</h6>
-              <span className="col-md-1">1 di 1</span>
-              <span className="col-md-4 align-content-center">
-                <div className="barra"></div>
-              </span>
-              <span className="col-5">⚔️</span>
-            </div>
-          </section>
-          <section className="row game">
-            <div className="bg-black col-md-9 d-flex align-items-start pt-2">
-              <figure>
-                <img src={rust} alt="csgo" className="games" />
-              </figure>
+          </div>
+          <div className="d-flex under-game mt-2 p-3 align-items-center">
+            <a href="#" className=" me-2 ">
+              Achivment
+              <span> 1 di 1</span>
+            </a>
+
+            <div className="barra"></div>
+            <span className="">⚔️</span>
+          </div>
+        </section>
+      </div>
+      <div className="p-3">
+        <section className="game  p-3">
+          <div className="d-flex justify-content-between align-items-end">
+            <div className="d-flex align-items-start pt-2">
+              <div className="bg-image rust"></div>
               <h6 className="m-3">Rust</h6>
             </div>
-            <div className="bg-black box col-md-3 pt-2">
-              <p> 2650 ore in totale</p>
-              <p> Ultimo avvio: 22 ott</p>
+            <div className="pt-2">
+              <p className="m-0 text-end"> 150 ore in totale</p>
+              <p className="m-0 text-end"> Ultimo avvio: 25 ott</p>
             </div>
-            <div className="row under-game mt-2 ">
-              <h6 className="col-md-1 me-4 ">Achivment</h6>
-              <span className="col-md-1">1 di 1</span>
-              <span className="col-md-4 align-content-center">
-                <div className="barra"></div>
-              </span>
-              <span className="col-5">⚔️</span>
+          </div>
+          <div className="d-flex under-game mt-2 p-3 align-items-center">
+            <a href="#" className=" me-2 ">
+              Achivment
+              <span> 1 di 1</span>
+            </a>
+
+            <div className="barra"></div>
+            <span className="">⚔️</span>
+          </div>
+        </section>
+      </div>
+      <div className="p-3">
+        <section className="game  p-3 ">
+          <div className="d-flex justify-content-between align-items-end">
+            <div className="d-flex align-items-start pt-2">
+              <div className="bg-image payday"></div>
+              <h6 className="m-3">Counter-Strike 2</h6>
             </div>
-          </section>
-          <section className="row game">
-            <div className="bg-black col-md-9 d-flex align-items-start pt-2">
-              <figure>
-                <img src={payday} alt="csgo" className="games" />
-              </figure>
-              <h6 className="m-3">Pay Day 3</h6>
+            <div className="pt-2">
+              <p className="m-0 text-end"> 150 ore in totale</p>
+              <p className="m-0 text-end"> Ultimo avvio: 25 ott</p>
             </div>
-            <div className="bg-black box col-md-3 pt-2">
-              <p> 10 ore in totale</p>
-              <p> Ultimo avvio: 25 ott</p>
-            </div>
-            <div className="row under-game mt-2 ">
-              <h6 className="col-md-1 me-4 ">Achivment</h6>
-              <span className="col-md-1">1 di 1</span>
-              <span className="col-md-4 align-content-center">
-                <div className="barra"></div>
-              </span>
-              <span className="col-5">⚔️</span>
-            </div>
-          </section>
+          </div>
+          <div className="d-flex under-game mt-2 p-3 align-items-center">
+            <a href="#" className=" me-2 ">
+              Achivment
+              <span> 1 di 1</span>
+            </a>
+
+            <div className="barra"></div>
+            <span className="">⚔️</span>
+          </div>
         </section>
       </div>
     </div>

@@ -1,53 +1,57 @@
-@import "../../styles/variables.scss";
-
+@import "../../styles/theme.scss";
 .aside {
   background-color: $bg_secondary;
   .status,
-  .medaglie,
-  .dettagli,
-  .gruppi,
-  .amici {
+  .medals,
+  .details,
+  .groups,
+  .friends {
     margin-bottom: 20px;
   }
+  .status {
+    color: $active_link;
+  }
+  a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    span {
+      font-family: $body_font;
+      font-size: 32px;
+      font-weight: 300;
+    }
+    &:hover {
+      text-decoration: underline;
+      color: $active_link;
+    }
+  }
+  .img-game {
+    width: 60px;
+    height: 60px;
+  }
 
-  .amici {
-    .amico {
-      display: flex;
-      align-items: center;
-      height: 100px; /* Altezza totale dell'elemento amico */
-      font-size: 12px; /* Dimensione del testo più piccola */
+  .friend {
+    font-size: 13px;
+    margin-bottom: 13px;
 
-      figure {
+    figure {
+      margin: 0;
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+    }
+
+    .datas {
+      margin-left: 10px;
+      p {
         margin: 0;
-        width: 60px;
-        height: 60px;
-        flex-shrink: 0; /* Impedisce all'immagine di ridimensionarsi */
-      }
-
-      .imggame {
-        width: 60px;
-        height: 60px;
-      }
-
-      .datas {
-        margin-left: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%; /* Assicura che .datas riempia l'altezza del genitore */
-
-        p {
-          margin: 0;
-          line-height: 1.1; /* Altezza della linea ridotta per comprimere il testo */
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
+        line-height: 1.1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }
-}
-.imggame {
-  width: 60px;
-  height: 60px;
 }

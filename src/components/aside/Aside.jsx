@@ -4,37 +4,49 @@ import "./aside.scss";
 
 const Aside = ({ Amici }) => {
   return (
-    <div className="aside ms-4 p-3">
-      <div className="status col-md-12">
-        <h2>Online</h2>
-      </div>
-      <div className="medaglie">
-        <h3>Medaglie 4</h3>
+    <div className="aside  p-3">
+      <h2 className="status">Online</h2>
+      <div className="medals">
+        <a href="#">
+          Medaglie <span>4</span>
+        </a>
         <span>👽❤️🧘‍♂️🤖</span>
       </div>
-      <div className="dettagli">
-        <p>Giochi 3</p>
-        <p>Inventario</p>
-        <p>Screenshot</p>
-        <p>Video</p>
-        <p>Oggetti del Workshop</p>
-        <p>Recensioni</p>
-        <p>Guide</p>
-        <p>Immagini</p>
+      <div className="details">
+        <a href="#">
+          Giochi <span>3</span>
+        </a>
+        <a href="#">Inventario</a>
+        <a href="#">Screenshot</a>
+        <a href="#">Video</a>
+        <a href="#">Oggetti del Workshop</a>
+        <a href="#">Recensioni</a>
+        <a href="#">Guide</a>
+        <a href="#">Immagini</a>
       </div>
-      <div className="gruppi">
-        <h3>Gruppi 1</h3>
-        <div className="gruppo">
-          <img src={ukn} alt="ukn" className="imggame mx-2" />
-          <span>UKN Network</span>
+      <div className="groups">
+        <a href="#">
+          Gruppi <span>1</span>
+        </a>
+        <div className="group">
+          <img src={ukn} alt="ukn" className="img-game me-2" />
+          <a href="#" className="d-inline">
+            UKN Network
+          </a>
         </div>
       </div>
-      <div className="amici">
-        <h3>Amici 10</h3>
+      <div className="friends">
+        <a href="#">
+          Amici <span>10</span>
+        </a>
         {Amici.slice(0, 5).map((amico) => (
-          <div key={amico.id} className="amico d-flex align-items-center">
+          <div key={amico.id} className="friend d-flex align-items-center">
             <figure>
-              <img src={amico.profilepic} alt="amico" className="imggame" />
+              <img
+                src={amico.profilepic}
+                alt="amico"
+                className="img-game d-flex flex-column justify-content-center h-100"
+              />
             </figure>
             <div className="datas">
               <p>{amico.name}</p>
