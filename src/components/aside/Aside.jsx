@@ -41,16 +41,17 @@ const Aside = ({ Amici }) => {
         </a>
         {Amici.slice(0, 5).map((amico) => (
           <div key={amico.id} className="friend d-flex align-items-center">
-            <figure>
-              <img
-                src={amico.profilepic}
-                alt="amico"
-                className="img-game d-flex flex-column justify-content-center h-100"
-              />
-            </figure>
+            <div
+              className="image col-md-2"
+              style={{
+                backgroundImage: `url(${amico.profilepic})`,
+              }}
+            ></div>
             <div className="datas">
               <p>{amico.name}</p>
-              <p>{amico.status}</p>
+              <p className={amico.status === "online" ? "online" : "offline"}>
+                {amico.status}
+              </p>
               <p>{amico.game}</p>
             </div>
           </div>

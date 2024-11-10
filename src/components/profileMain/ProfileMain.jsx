@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./ProfileMain.scss";
 import "../../App.scss";
-import gatto from "../../assets/gatto.jpg";
+// import gatto from "../../assets/gatto.jpg";
+import gatto from "../../assets/fuoco.png";
 
 const ProfileMain = ({ avatar, nickname }) => {
   const [randomNumber, setRandomNumber] = useState(null);

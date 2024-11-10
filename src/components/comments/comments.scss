@@ -1,37 +1,26 @@
-@import "../../styles/variables.scss";
+@import "../../styles/theme.scss";
+.comments {
+  background-color: rgba($color: $bg_secondary, $alpha: 0.4);
+  section.title {
+    background-color: $variamo;
+    a {
+      color: white;
+    }
+  }
+  .input {
+    background-color: $bg_secondary;
+  }
 
-section.title {
-  background-color: black;
-}
-.commenta {
-  color: black;
-  padding: 10px;
-  border: 2px solid gray;
-  transition: border-color 0.5s ease, background-color 0.3s ease;
-}
-input.commenta:focus {
-  border-color: rgb(0, 255, 242);
-  background-color: white;
-}
-.input {
-  background-color: $bg_secondary;
-}
-.immagine {
-  flex: 0 0 80px;
-  height: 80px;
-  margin-right: 10px;
-}
-.avatar {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.comment article {
-  flex-grow: 1;
-}
-.commento {
-  background-color: $bg_secondary;
-}
-.dati {
-  background-color: $bg_secondary;
+  .image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+  }
+  .btn-pagination {
+    background-color: $button_bg;
+    border: none;
+    align-items: center;
+    display: flex;
+  }
 }

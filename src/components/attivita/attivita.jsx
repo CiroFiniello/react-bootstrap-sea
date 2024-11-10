@@ -1,7 +1,5 @@
 import React from "react";
-import csgo from "../../assets/csgo.webp";
-import rust from "../../assets/rust.webp";
-import payday from "../../assets/payday.webp";
+
 import "./attivita.scss";
 
 const Attivita = () => {

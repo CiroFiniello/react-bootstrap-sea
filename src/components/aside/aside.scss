@@ -51,7 +51,22 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        &:first-child {
+          font-family: $head_font;
+        }
       }
     }
   }
+}
+.online {
+  color: rgb(0, 255, 0);
+}
+.offline {
+  color: rgb(155, 154, 154);
+}
+.image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50px;
 }

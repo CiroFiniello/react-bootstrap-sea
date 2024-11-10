@@ -1,0 +1,31 @@
+// checkbox
+.form-check-input {
+  background-color: transparent;
+  border: 1px solid white;
+  &:focus {
+    box-shadow: none;
+    border: 1px solid $active_link;
+  }
+  &:checked {
+    background-color: $active_link;
+    &[type="checkbox"] {
+      --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23001520' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    }
+  }
+}
+//form input
+
+.input-group {
+  .form-control {
+    background-color: rgba($color: $active_link, $alpha: 0.2);
+    border: 1px solid white;
+    color: white;
+    &::placeholder {
+      color: white;
+      font-style: italic;
+    }
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
