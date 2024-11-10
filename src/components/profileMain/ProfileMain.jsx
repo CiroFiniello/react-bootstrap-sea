@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ProfileMain.scss";
 import "../../App.scss";
 import gatto from "../../assets/gatto.jpg";
 
 const ProfileMain = ({ avatar, nickname }) => {
-  const randomNumber = function () {
+  const [randomNumber, setRandomNumber] = useState(null);
+
+  useEffect(() => {
     const x = Math.floor(Math.random() * (100 - 1 + 1));
-    return x;
-  };
+    setRandomNumber(x);
+  }, []);
+
   return (
     <div className="row mx-2">
       <section className="col-md-9 mt-3">
@@ -32,7 +35,7 @@ const ProfileMain = ({ avatar, nickname }) => {
       </section>
       <section className="container-level col-md-3 align-content-center">
         <h3 className="d-flex align-items-center">
-          Livello <span className="level-number d-block">{randomNumber()}</span>
+          Livello <span className="level-number d-block">{randomNumber}</span>
         </h3>
         <div className="box-right p-2 m-1 d-flex align-items-center">
           <span className="align-self-center me-2"></span>
@@ -46,4 +49,5 @@ const ProfileMain = ({ avatar, nickname }) => {
     </div>
   );
 };
+
 export default ProfileMain;
