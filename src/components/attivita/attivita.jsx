@@ -60,7 +60,7 @@ const Attivita = () => {
           <div className="d-flex justify-content-between align-items-end">
             <div className="d-flex align-items-start pt-2">
               <div className="bg-image payday"></div>
-              <h6 className="m-3">Counter-Strike 2</h6>
+              <h6 className="m-3">Pay Day 3</h6>
             </div>
             <div className="pt-2">
               <p className="m-0 text-end"> 150 ore in totale</p>
